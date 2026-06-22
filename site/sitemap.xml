@@ -22,6 +22,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://bumbumshakataka1.github.io/hosting-docs/en/faq/"/>
     </url>
     <url>
+        <loc>https://bumbumshakataka1.github.io/hosting-docs/</loc>
+        <lastmod>2026-06-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://bumbumshakataka1.github.io/hosting-docs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bumbumshakataka1.github.io/hosting-docs/en/"/>
+    </url>
+    <url>
         <loc>https://bumbumshakataka1.github.io/hosting-docs/protocols/</loc>
         <lastmod>2026-06-22</lastmod>
         <changefreq>daily</changefreq>
@@ -61,6 +68,7 @@
         <lastmod>2026-06-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://bumbumshakataka1.github.io/hosting-docs/en/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://bumbumshakataka1.github.io/hosting-docs/"/>
     </url>
     <url>
         <loc>https://bumbumshakataka1.github.io/hosting-docs/en/protocols/</loc>
