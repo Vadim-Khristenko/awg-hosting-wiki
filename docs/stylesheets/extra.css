@@ -1,0 +1,87 @@
+/* Принудительно красим базовые цвета темы */
+:root, [data-md-color-scheme="amnezia-dark"] {
+  /* Полностью черный фон для всего сайта */
+  --md-default-bg-color: #0b0c10 !important;
+  --md-default-bg-color--light: #12131a !important;
+  
+  /* Фон верхней шапки (делаем черным) */
+  --md-primary-fg-color: #0b0c10 !important;
+  --md-primary-fg-color--dark: #000000 !important;
+  
+  /* Главный текст — контрастный белый/светло-серый */
+  --md-default-fg-color: #ffffff !important;
+  --md-default-fg-color--light: #a3a3a3 !important;
+  --md-default-fg-color--lighter: #525252 !important;
+
+  /* Неоново-зеленый акцент для ссылок, кнопок и иконок */
+  --md-accent-fg-color: #00e63d !important;
+  --md-accent-fg-color--transparent: rgba(0, 230, 61, 0.1) !important;
+  
+  /* Цвет ссылок в тексте */
+  --md-typeset-a-color: #00e63d !important;
+  
+  /* Стилизация кода (подсветка синтаксиса в теме Material) */
+  --md-code-fg-color: #85e89d !important; /* Меняет белый текст кода на пастельный зеленый */
+  --md-code-bg-color: #161b22 !important; /* Делает фон плашек кода чуть темнее и глубже */
+}
+
+/* Принудительная замена белого цвета для инлайн-кода (одиночные команды в тексте) */
+.md-typeset code {
+  color: #85e89d !important;
+  background-color: #161b22 !important;
+  font-weight: 600;
+}
+
+/* Принудительная замена белого цвета для больших блоков кода (многострочные команды) */
+.md-typeset pre code {
+  color: #85e89d !important;
+}
+
+/* Настройка шрифтов и отступов заголовков */
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+/* Делаем боковое левое меню и правое оглавление белыми и читаемыми */
+.md-nav__link {
+  color: #ffffff !important;
+}
+.md-nav__link--active, .md-nav__link:hover {
+  color: #00e63d !important; /* Зеленый при наведении */
+}
+
+/* Красим иконки в шапке (поиск, планета) в белый цвет */
+.md-header__button {
+  color: #ffffff !important;
+}
+.md-header__button:hover {
+  color: #00e63d !important;
+}
+
+/* Фирменный зеленый класс для выделения слов */
+.green {
+  color: #00e63d !important;
+}
+/* Стилизация списков категорий на главной странице Wiki */
+.md-typeset ul {
+    list-style-type: none;
+    padding-left: 0 !important;
+}
+
+.md-typeset ul li {
+    margin-bottom: 16px !important;
+    line-height: 1.5;
+}
+
+/* Выделение ссылок на разделы жирным */
+.md-typeset ul li strong a {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* Красивый разделитель страниц */
+hr {
+    border-top: 1px solid #1e293b !important;
+    margin: 32px 0 !important;
+}
