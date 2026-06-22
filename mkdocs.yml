@@ -61,12 +61,13 @@ markdown_extensions:
 
 # Блок ручной навигации, фиксирующий порядок разделов
 nav:
-  - 01_index.md
-  - 02_commands.md
-  - 03_faq.md
-  - 04_vpn-setup.md
-  - 05_protocols.md
-  - 06_3x-ui.md
+  - index.md
+  - commands.md
+  - faq.md
+  - vpn-setup.md
+  - protocols.md
+  - 3x-ui.md
+
 
 # Текст и верстка, которые теперь гарантированно выведутся в самый низ страницы
 extra:
