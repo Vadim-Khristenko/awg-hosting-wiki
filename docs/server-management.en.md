@@ -1,17 +1,6 @@
 # Server Management: Amnezia VPS NL#2
 
 
-## 📌 General Information
-
-| Parameter | Value |
-| :--- | :--- |
-| **Service Type** | VPN VPS |
-| **Price** | $5.50 USD / Monthly |
-| **Next Due Date** | July 17, 2026 |
-| **Payment Method** | Freekassa |
-| **Location** | 🇳🇱 Netherlands (NL) |
-
----
 
 ## ⚙️ Connection Details
 
