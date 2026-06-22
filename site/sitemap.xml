@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
+        <loc>https://bumbumshakataka1.github.io/hosting-docs/</loc>
+        <lastmod>2026-06-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://bumbumshakataka1.github.io/hosting-docs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bumbumshakataka1.github.io/hosting-docs/en/"/>
+    </url>
+    <url>
         <loc>https://bumbumshakataka1.github.io/hosting-docs/01_index/</loc>
         <lastmod>2026-06-22</lastmod>
         <changefreq>daily</changefreq>
@@ -41,6 +48,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://bumbumshakataka1.github.io/hosting-docs/06_3x-ui/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://bumbumshakataka1.github.io/hosting-docs/en/06_3x-ui/"/>
+    </url>
+    <url>
+        <loc>https://bumbumshakataka1.github.io/hosting-docs/en/</loc>
+        <lastmod>2026-06-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bumbumshakataka1.github.io/hosting-docs/en/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://bumbumshakataka1.github.io/hosting-docs/"/>
     </url>
     <url>
         <loc>https://bumbumshakataka1.github.io/hosting-docs/en/01_index/</loc>
