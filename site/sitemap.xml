@@ -36,6 +36,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://bumbumshakataka1.github.io/hosting-docs/en/protocols/"/>
     </url>
     <url>
+        <loc>https://bumbumshakataka1.github.io/hosting-docs/server-management/</loc>
+        <lastmod>2026-06-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://bumbumshakataka1.github.io/hosting-docs/server-management/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bumbumshakataka1.github.io/hosting-docs/en/server-management/"/>
+    </url>
+    <url>
         <loc>https://bumbumshakataka1.github.io/hosting-docs/vpn-setup/</loc>
         <lastmod>2026-06-22</lastmod>
         <changefreq>daily</changefreq>
@@ -76,6 +83,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://bumbumshakataka1.github.io/hosting-docs/en/protocols/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://bumbumshakataka1.github.io/hosting-docs/protocols/"/>
+    </url>
+    <url>
+        <loc>https://bumbumshakataka1.github.io/hosting-docs/en/server-management/</loc>
+        <lastmod>2026-06-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bumbumshakataka1.github.io/hosting-docs/en/server-management/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://bumbumshakataka1.github.io/hosting-docs/server-management/"/>
     </url>
     <url>
         <loc>https://bumbumshakataka1.github.io/hosting-docs/en/vpn-setup/</loc>
