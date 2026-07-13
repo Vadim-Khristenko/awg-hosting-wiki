@@ -9,7 +9,7 @@
 Подключитесь к вашему серверу по SSH и выполните официальный скрипт автоматической установки:
 
 ```bash
-bash <(curl -Ls https://githubusercontent.com)
+bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
 ```
 
 В процессе установки консоль предложит вам настроить параметры безопасности. **Рекомендуем согласиться (`y`)** и задать кастомные данные:

@@ -3,7 +3,7 @@ site_url: https://bumbumshakataka1.github.io/hosting-docs/
 
 # Ссылка на ваш GitHub репозиторий (добавит иконку со звездами в шапку сайта)
 repo_name: bumbumshakataka1/hosting-docs
-repo_url: https://bumbumshakataka1.github.io/hosting-docs/
+repo_url: https://github.com/bumbumshakataka1/hosting-docs
 
 theme:
   name: material
@@ -89,9 +89,9 @@ extra:
       </div>
       <div>
         <h4 style="color: #ffffff; font-weight: 700; margin: 0 0 10px 0; font-size: 0.9rem;">Legal</h4>
-        <p style="margin: 0; line-height: 1.6;"><a href="https://amnezia.hostprivacy" target="_blank" style="color: #a3a3a3; font-size: 0.8rem; text-decoration: none;">Privacy Policy</a></p>
-        <p style="margin: 0; line-height: 1.6;"><a href="https://amnezia.hostrefund" target="_blank" style="color: #a3a3a3; font-size: 0.8rem; text-decoration: none;">Refund Policy</a></p>
-        <p style="margin: 0; line-height: 1.6;"><a href="https://amnezia.hostterms" target="_blank" style="color: #a3a3a3; font-size: 0.8rem; text-decoration: none;">User Agreement</a></p>
+        <p style="margin: 0; line-height: 1.6;"><a href="https://amnezia.host/privacy" target="_blank" style="color: #a3a3a3; font-size: 0.8rem; text-decoration: none;">Privacy Policy</a></p>
+        <p style="margin: 0; line-height: 1.6;"><a href="https://amnezia.host/refund" target="_blank" style="color: #a3a3a3; font-size: 0.8rem; text-decoration: none;">Refund Policy</a></p>
+        <p style="margin: 0; line-height: 1.6;"><a href="https://amnezia.host/terms" target="_blank" style="color: #a3a3a3; font-size: 0.8rem; text-decoration: none;">User Agreement</a></p>
       </div>
     </div>
     <div style="text-align: left; color: #757575; font-size: 0.75rem; line-height: 1.5; margin-top: 1.5rem; width: 100%;">

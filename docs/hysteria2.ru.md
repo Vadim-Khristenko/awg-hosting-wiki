@@ -27,7 +27,7 @@ apt update && apt install curl micro pwgen -y
 Скачайте и запустите официальный скрипт автоматической установки актуальной версии Hysteria 2:
 
 ```bash
-bash <(curl -fsSL https://hy2.io)
+bash <(curl -fsSL https://get.hy2.sh/)
 ```
 
 ---

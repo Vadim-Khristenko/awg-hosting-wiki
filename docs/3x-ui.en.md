@@ -9,7 +9,7 @@
 Connect to your server via SSH and execute the official automated installation script:
 
 ```bash
-bash <(curl -Ls https://githubusercontent.com)
+bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
 ```
 
 During the setup process, the console will ask if you want to customize your security parameters. **We highly recommend typing `y`** and setting up custom credentials:
@@ -39,7 +39,7 @@ The **VLESS + Reality** protocol combination stands as the ultimate choice for b
 3. Toggle the **Reality** switch to **ON**.
 4. Configure the stealth and masking parameters:
    * **uTLS:** Select `chrome` or `firefox`.
-   * **Dest / SNI:** Specify a target website to mimic (the panel will automatically suggest reliable presets, such as `://google.com` and `://google.com`).
+   * **Dest / SNI:** Specify a target website to mimic (the panel will automatically suggest reliable presets, such as `dl.google.com:443` and `dl.google.com`).
    * Click both the **"Get New Cert"** and **"Get New Seed"** buttons to dynamically generate your private security keys.
 5. Click the **"Create"** button at the bottom of the form.
 

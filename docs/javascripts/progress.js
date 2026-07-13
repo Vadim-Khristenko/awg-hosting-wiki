@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div>
           <h4 style="color: #ffffff; font-weight: 700; margin: 0 0 10px 0; font-size: 0.9rem;">Legal</h4>
-          <p style="margin: 0; line-height: 1.6;"><a href="https://amnezia.hostprivacy" target="_blank" style="color: #a3a3a3; font-size: 0.8rem; text-decoration: none;">Privacy Policy</a></p>
-          <p style="margin: 0; line-height: 1.6;"><a href="https://amnezia.hostrefund" target="_blank" style="color: #a3a3a3; font-size: 0.8rem; text-decoration: none;">Refund Policy</a></p>
-          <p style="margin: 0; line-height: 1.6;"><a href="https://amnezia.hostterms" target="_blank" style="color: #a3a3a3; font-size: 0.8rem; text-decoration: none;">User Agreement</a></p>
+          <p style="margin: 0; line-height: 1.6;"><a href="https://amnezia.host/privacy" target="_blank" style="color: #a3a3a3; font-size: 0.8rem; text-decoration: none;">Privacy Policy</a></p>
+          <p style="margin: 0; line-height: 1.6;"><a href="https://amnezia.host/refund" target="_blank" style="color: #a3a3a3; font-size: 0.8rem; text-decoration: none;">Refund Policy</a></p>
+          <p style="margin: 0; line-height: 1.6;"><a href="https://amnezia.host/terms" target="_blank" style="color: #a3a3a3; font-size: 0.8rem; text-decoration: none;">User Agreement</a></p>
         </div>
       </div>
     `;

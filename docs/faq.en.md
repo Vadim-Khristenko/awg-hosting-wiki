@@ -18,3 +18,19 @@ Answers to frequently asked questions and technical solutions for common issues 
 ??? question "Which VPN protocol should I choose in the Amnezia app?"
     *   **Amnezia WG (WireGuard):** The fastest and most lightweight protocol, ideal if your ISP does not block standard VPN traffic.
     *   **XRay / OpenVPN vmess:** Excellent choice for regions with strict censorship, as these protocols disguise traffic as regular website visits (HTTPS).
+
+??? question "How much traffic does running a VPN on the server consume?"
+    The VPN server itself does not generate traffic. Consumption depends entirely on your activity: if you download a 1 GB file through the VPN, the server spends 1 GB downloading it and another 1 GB delivering it to you (2 GB total from your hosting limit). Choose plans with unlimited traffic.
+
+??? question "The Ping command doesn't work! 'Request timed out' or '100% loss'"
+    ICMP traffic is blocked on our servers. Check the server's availability via `ssh root@server-ip` instead.
+
+---
+
+### 🔧 Technical Support
+
+If your problem is not listed here, or you need personalized assistance with your Amnezia Hosting servers:
+
+*   💻 Open a ticket in the **Client Area** of your hosting provider.
+*   💬 Visit the official Amnezia user community on Telegram.
+*   📂 Check the **[Server Management](server-management.md)** section for self-diagnosis of the OS.

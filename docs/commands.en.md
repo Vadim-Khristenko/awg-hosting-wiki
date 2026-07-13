@@ -1,11 +1,11 @@
 # 🚀 Quick Start <span class="green">with VPS</span>
 
-This guide will help you make your first connection to your new Amnezia Hosting server and introduce you to the basic commands for system management.
+This guide will help you make your first connection to your new Amnezia Hosting server and introduce you to the basic commands for managing the system.
 
 ---
 
 ### 🚀 Step 1. Get Server Credentials
-After successful activation of your VPS, you will receive the main access details via email:
+After your VPS is successfully activated, the main access details will be sent to the email address in your account:
 *   **Server IP Address** (e.g., `192.168.1.100`)
 *   **Username** (usually `root`)
 *   **Password** or **SSH Key**
@@ -14,14 +14,42 @@ After successful activation of your VPS, you will receive the main access detail
 
 ### 💻 Step 2. Connect to the Server via SSH
 
-#### For Linux / macOS / Windows:
+Depending on your operating system, open a terminal and enter the connection command.
+
+#### For Linux / macOS / Windows (via Terminal or PowerShell):
 ```bash
 ssh root@YOUR_SERVER_IP
+```
+*Example:* `ssh root@192.168.1.100`
+
+> 💡 On the first connection, the terminal will show the warning `The authenticity of host... can't be established`. Type **`yes`** and press **Enter**, then paste your server password (the password characters will not be shown as you type).
+
+---
+
+### 🔄 Step 3. Update the System First
+
+Right after your first login, be sure to update the package list and installed software to the latest security versions. Run the command:
+
+```bash
+apt update && apt upgrade -y
 ```
 
 ---
 
-### 🔄 Step 3. Update the System
-```bash
-apt update && apt upgrade -y
-```
+### 🛠️ Essential Commands for Managing Your VPS
+
+Here is the basic set of Linux commands that every administrator needs:
+
+| Command | Description |
+| :--- | :--- |
+| `pwd` | Show the current folder you are in |
+| `ls -la` | List all files and folders in the current directory |
+| `cd /path/to/folder` | Change to another folder |
+| `htop` | Launch the task manager (CPU and RAM monitoring) |
+| `reboot` | Reboot your server |
+
+---
+
+### 🛡️ Next Step
+After the basic update, you can move on to deploying your personal VPN.
+*   **[Go to Amnezia VPN Setup](vpn-setup.md)**
