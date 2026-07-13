@@ -13,9 +13,9 @@ theme:
   font:
     text: Inter
     code: Roboto Mono
-  # Тёмная схема Material (slate) как база + кастомные цвета из extra.css
+  # Кастомная тёмная схема (все цвета задаются в extra.css) — гарантирует чёрный фон
   palette:
-    - scheme: slate
+    - scheme: amnezia-dark
       primary: custom
       accent: custom
   features:

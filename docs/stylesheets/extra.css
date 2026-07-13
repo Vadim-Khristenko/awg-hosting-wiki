@@ -1,221 +1,315 @@
 /* ============================================================
-   ЦВЕТОВАЯ СХЕМА (база — тёмная тема Material «slate»)
+   AMNEZIA HOSTING DOCS — тёмная тема (чёрный + неоново-зелёный)
    ============================================================ */
+
 :root,
-[data-md-color-scheme="slate"] {
-  /* Полностью тёмный фон для всего сайта */
-  --md-default-bg-color: #0b0c10 !important;
-  --md-default-bg-color--light: #12131a !important;
+[data-md-color-scheme="amnezia-dark"] {
+  /* Фон: настоящий чёрный + чуть более светлые «приподнятые» поверхности */
+  --md-default-bg-color: #0a0b0d !important;
+  --md-default-bg-color--light: #101216 !important;
+  --md-default-bg-color--lighter: #16181d !important;
+  --md-default-bg-color--lightest: #1c1f26 !important;
 
-  /* Фон верхней шапки */
-  --md-primary-fg-color: #0b0c10 !important;
+  /* Шапка */
+  --md-primary-fg-color: #0a0b0d !important;
+  --md-primary-fg-color--light: #0a0b0d !important;
   --md-primary-fg-color--dark: #000000 !important;
+  --md-primary-bg-color: #ffffff !important;
+  --md-primary-bg-color--light: #a3a3a3 !important;
 
-  /* Основной текст — контрастный светлый */
+  /* Текст */
   --md-default-fg-color: #ffffff !important;
-  --md-default-fg-color--light: #a3a3a3 !important;
-  --md-default-fg-color--lighter: #525252 !important;
+  --md-default-fg-color--light: #b4b8c0 !important;
+  --md-default-fg-color--lighter: #6b7280 !important;
+  --md-default-fg-color--lightest: #33363d !important;
 
-  /* Неоново-зелёный акцент для ссылок, кнопок и иконок */
+  /* Акцент — неоново-зелёный */
   --md-accent-fg-color: #00e63d !important;
   --md-accent-fg-color--transparent: rgba(0, 230, 61, 0.1) !important;
-
-  /* Цвет ссылок в тексте */
   --md-typeset-a-color: #00e63d !important;
 
-  /* Подсветка синтаксиса */
+  /* Код */
   --md-code-fg-color: #85e89d !important;
-  --md-code-bg-color: #161b22 !important;
+  --md-code-bg-color: #0d1117 !important;
+
+  /* Тени */
+  --md-shadow-z1: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --md-shadow-z2: 0 6px 28px rgba(0, 0, 0, 0.5);
 }
 
-/* Инлайн-код (одиночные команды в тексте) */
-.md-typeset code {
-  color: #85e89d !important;
-  background-color: #161b22 !important;
-  font-weight: 600;
+/* Принудительно чёрный фон на всех основных контейнерах,
+   чтобы нигде не «просвечивал» серый */
+html,
+body,
+.md-main,
+.md-container,
+.md-content,
+.md-content__inner,
+.md-sidebar {
+  background-color: transparent !important;
+}
+body {
+  background-color: #0a0b0d !important;
 }
 
-/* Многострочные блоки кода */
+/* ============================================================
+   ШРИФТЫ
+   ============================================================ */
+body,
+input,
+.md-typeset,
+.md-nav,
+.md-header {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.md-typeset code,
 .md-typeset pre code {
-  color: #85e89d !important;
+  font-family: "Roboto Mono", "SFMono-Regular", Consolas, "Liberation Mono",
+    Menlo, monospace;
 }
 
-/* Заголовки */
+.md-typeset {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: #d7dae0;
+}
+
+/* ============================================================
+   ЗАГОЛОВКИ
+   ============================================================ */
 .md-typeset h1,
 .md-typeset h2,
-.md-typeset h3 {
+.md-typeset h3,
+.md-typeset h4 {
   color: #ffffff !important;
   font-weight: 800 !important;
+  letter-spacing: -0.01em;
+}
+.md-typeset h1 {
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+}
+.md-typeset h2 {
+  font-size: 1.35rem;
+  margin-top: 2.4rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Боковое меню и правое оглавление */
-.md-nav__link {
-  color: #ffffff !important;
-}
-.md-nav__link--active,
-.md-nav__link:hover {
+.green {
   color: #00e63d !important;
 }
 
-/* Названия групп-разделов в боковом меню */
-.md-nav__item--section > .md-nav__link {
-  color: #a3a3a3 !important;
-  font-weight: 700 !important;
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
+/* Ссылки в тексте */
+.md-typeset a {
+  color: #00e63d !important;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+.md-typeset a:hover {
+  opacity: 0.75;
 }
 
-/* Иконки в шапке (поиск, язык) */
+/* ============================================================
+   КОД
+   ============================================================ */
+.md-typeset code {
+  color: #85e89d !important;
+  background-color: #0d1117 !important;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 0.1em 0.4em;
+}
+.md-typeset pre > code {
+  border: none;
+  padding: 0.9rem 1rem;
+}
+.md-typeset pre {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+.md-clipboard {
+  color: #6b7280 !important;
+}
+.md-clipboard:hover {
+  color: #00e63d !important;
+}
+
+/* ============================================================
+   ШАПКА (стекло)
+   ============================================================ */
+.md-header {
+  background-color: rgba(10, 11, 13, 0.8) !important;
+  backdrop-filter: blur(14px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(140%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: none !important;
+  transition: background-color 0.25s ease !important;
+}
+.md-header--shadow,
+.md-header[data-md-state="shadow"] {
+  background-color: rgba(10, 11, 13, 0.9) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
+}
 .md-header__button {
   color: #ffffff !important;
 }
 .md-header__button:hover {
   color: #00e63d !important;
 }
+.md-header__title {
+  font-weight: 700;
+}
 
-/* Фирменный зелёный класс для выделения слов */
-.green {
-  color: #00e63d !important;
+/* Табы/поиск */
+.md-search__form {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-radius: 10px;
+}
+.md-search__form:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+.md-search__output {
+  background-color: rgba(16, 18, 22, 0.96) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 12px;
 }
 
 /* ============================================================
-   ТИПОГРАФИКА И СПИСКИ
+   НАВИГАЦИЯ (боковое меню + оглавление)
+   ============================================================ */
+.md-nav {
+  font-size: 0.72rem;
+}
+.md-nav__link {
+  color: #b4b8c0 !important;
+  border-radius: 8px;
+  padding: 0.35rem 0.6rem;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+.md-nav__link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+.md-nav__link--active,
+.md-nav__item .md-nav__link--active {
+  color: #00e63d !important;
+  font-weight: 700;
+}
+
+/* Заголовки групп-разделов в боковом меню */
+.md-nav--primary .md-nav__item--section > .md-nav__link {
+  color: #6b7280 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  margin-top: 0.6rem;
+}
+
+/* ============================================================
+   СПИСКИ И РАЗДЕЛИТЕЛИ
    ============================================================ */
 .md-typeset ul {
   list-style-type: none;
   padding-left: 0 !important;
 }
-
 .md-typeset ul li {
-  margin-bottom: 16px !important;
-  line-height: 1.5;
+  margin-bottom: 14px !important;
+  line-height: 1.6;
 }
-
-/* Выделение ссылок на разделы жирным */
 .md-typeset ul li strong a {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
 }
 
-/* Разделитель страниц */
-hr {
-  border-top: 1px solid #1e293b !important;
-  margin: 32px 0 !important;
+.md-typeset hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  margin: 2rem 0 !important;
 }
 
 /* ============================================================
-   «ЖИДКОЕ СТЕКЛО» — КАРТОЧКИ ГЛАВНОЙ СТРАНИЦЫ
-   Использование в Markdown:
-     <div class="grid cards" markdown> ... </div>
+   КАРТОЧКИ ГЛАВНОЙ (жидкое стекло)
+   <div class="grid cards" markdown> ... </div>
    ============================================================ */
 .md-typeset .grid.cards > ul {
   margin: 0;
 }
-
 .md-typeset .grid.cards > ul > li,
 .md-typeset .grid.cards > .card {
-  background: rgba(20, 22, 30, 0.55) !important;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: 16px !important;
   padding: 1.3rem 1.4rem !important;
   margin: 0 !important;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, border-color 0.2s ease,
+    box-shadow 0.2s ease, background 0.2s ease;
 }
-
 .md-typeset .grid.cards > ul > li:hover,
 .md-typeset .grid.cards > .card:hover {
-  border-color: rgba(0, 230, 61, 0.45) !important;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.45),
-    0 0 0 1px rgba(0, 230, 61, 0.12);
+  background: rgba(0, 230, 61, 0.05) !important;
+  border-color: rgba(0, 230, 61, 0.5) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(0, 230, 61, 0.15);
 }
-
 .md-typeset .grid.cards > ul > li > hr {
-  margin: 0.8rem 0 !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  margin: 0.7rem 0 !important;
 }
 
 /* ============================================================
-   «ЖИДКОЕ СТЕКЛО» — БЛОКИ ADMONITION И РАСКРЫВАЮЩИЕСЯ (details)
+   ADMONITION / DETAILS (жидкое стекло)
    ============================================================ */
 .md-typeset .admonition,
 .md-typeset details {
-  background: rgba(20, 22, 30, 0.5) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: 12px !important;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.28);
+  font-size: 0.75rem;
+}
+.md-typeset .admonition-title,
+.md-typeset summary {
+  background: rgba(255, 255, 255, 0.03) !important;
+  font-weight: 700;
 }
 
 /* ============================================================
-   «ЖИДКОЕ СТЕКЛО» — ТАБЛИЦЫ
+   ТАБЛИЦЫ
    ============================================================ */
 .md-typeset table:not([class]) {
-  background: rgba(20, 22, 30, 0.45);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   overflow: hidden;
+  font-size: 0.75rem;
 }
-
 .md-typeset table:not([class]) th {
   background: rgba(0, 230, 61, 0.08) !important;
   color: #ffffff !important;
   font-weight: 700;
+  border: none;
 }
-
-.md-typeset table:not([class]) tr:hover {
+.md-typeset table:not([class]) td {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.md-typeset table:not([class]) tr:hover td {
   background: rgba(255, 255, 255, 0.03);
 }
 
 /* ============================================================
-   СТЕКЛО ШАПКИ И ПОИСКА
-   ============================================================ */
-.md-header {
-  background-color: rgba(11, 12, 16, 0.7) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  transition: background-color 0.25s, backdrop-filter 0.25s !important;
-}
-
-.md-header[data-md-state="shadow"] {
-  background-color: rgba(11, 12, 16, 0.8) !important;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4) !important;
-}
-
-.md-search__output {
-  background-color: rgba(18, 19, 26, 0.85) !important;
-  backdrop-filter: blur(20px) !important;
-  -webkit-backdrop-filter: blur(20px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-}
-
-/* ============================================================
-   СКРОЛЛБАР
-   ============================================================ */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #0b0c10;
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 230, 97, 0.3);
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 230, 97, 0.6);
-}
-
-/* ============================================================
-   ПОЛОСА ПРОГРЕССА ЧТЕНИЯ
+   ПОЛОСА ПРОГРЕССА ЧТЕНИЯ (под шапкой)
    ============================================================ */
 #reading-progress-bar {
   position: absolute;
@@ -230,16 +324,49 @@ hr {
 }
 
 /* ============================================================
-   ФУТЕР
+   СКРОЛЛБАР
    ============================================================ */
-.md-footer-meta {
-  background-color: #050608 !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-  padding-top: 2rem !important;
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0b0d;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 230, 61, 0.3);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 230, 61, 0.6);
 }
 
+/* ============================================================
+   ФУТЕР (единственный, серверный — из mkdocs.yml)
+   ============================================================ */
+.md-footer {
+  background-color: #050608 !important;
+}
+.md-footer-meta {
+  background-color: #050608 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+  padding-top: 1.5rem !important;
+}
+.md-footer__inner {
+  background-color: #050608 !important;
+}
 .md-copyright {
   color: #a3a3a3 !important;
   line-height: 1.6 !important;
   font-size: 0.75rem !important;
+  width: 100%;
+}
+.md-copyright__highlight {
+  color: #a3a3a3 !important;
+}
+.md-footer-meta a {
+  color: #a3a3a3 !important;
+}
+.md-footer-meta a:hover {
+  color: #00e63d !important;
 }
