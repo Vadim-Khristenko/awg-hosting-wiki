@@ -1,10 +1,18 @@
-# 📂 Docs
-
-The official **Amnezia Hosting** knowledge base — VPS servers for your own VPN without complicated setup or headaches. Here you will find step-by-step guides for connecting, setting up your VPN, and managing your server.
-
+---
+hide:
+  - toc
 ---
 
-### 📂 Documentation Sections
+<div class="hero">
+  <h1 class="hero__title">Amnezia <span class="green">Hosting</span></h1>
+  <p class="hero__subtitle">VPS servers for your own VPN without complicated setup or headaches. Step-by-step guides for connecting, setting up your VPN, and managing your server — from your first login to advanced protocols.</p>
+  <div class="hero__actions">
+    <a class="md-button md-button--primary" href="commands/">🚀 Quick Start</a>
+    <a class="md-button" href="vpn-setup/">🛡️ Set Up VPN</a>
+  </div>
+</div>
+
+## Documentation Sections
 
 <div class="grid cards" markdown>
 
@@ -50,11 +58,15 @@ The official **Amnezia Hosting** knowledge base — VPS servers for your own VPN
 
     Answers to common questions and fixes for typical connection errors.
 
+-   🌐 **[Amnezia VPN](https://amnezia.org)**
+
+    ---
+
+    Free, open-source app for connecting to your server.
+
 </div>
 
----
-
-### 📦 What's Included
+## What's Included
 
 Amnezia Hosting plans are tuned for smooth VPN performance with **up to 10 devices** connected simultaneously:
 

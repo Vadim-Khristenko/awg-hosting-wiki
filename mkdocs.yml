@@ -13,11 +13,20 @@ theme:
   font:
     text: Inter
     code: Roboto Mono
-  # Кастомная тёмная схема (все цвета задаются в extra.css) — гарантирует чёрный фон
+  # Кастомные схемы (все цвета задаются в extra.css). Переключатель тём в шапке.
   palette:
     - scheme: amnezia-dark
       primary: custom
       accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Переключить на светлую тему
+    - scheme: amnezia-light
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Переключить на тёмную тему
   features:
     - navigation.sections    # Группы разделов в боковом меню
     - navigation.expand      # Разделы развёрнуты по умолчанию
@@ -49,6 +58,7 @@ plugins:
           build: true
           # Перевод названий разделов навигации на английский
           nav_translations:
+            Главная: Home
             Начало работы: Getting Started
             VPN и защита: VPN & Security
             Помощь: Help
@@ -71,7 +81,7 @@ markdown_extensions:
 
 # Блок ручной навигации, сгруппированный по разделам
 nav:
-  - index.md
+  - Главная: index.md
   - Начало работы:
       - commands.md
       - server-management.md
