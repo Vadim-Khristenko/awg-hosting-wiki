@@ -7,7 +7,7 @@ Answers to frequently asked questions and technical solutions for common issues 
 ### ❓ Frequently Asked Questions
 
 ??? question "Can I use a single server for multiple devices?"
-    **Yes.** You can configure AmneziaVPN on your server and then generate configuration files or QR codes for any of your devices (smartphones, tablets, PCs) or share them with others. The number of connected devices is only limited by your VPS performance and bandwidth.
+    **Yes.** You can configure AmneziaVPN on your server and then generate configuration files or QR codes for any of your devices (smartphones, tablets, PCs) or share them with others. Our plans are tuned for smooth performance with **up to 10 devices** connected simultaneously.
 
 ??? question "Why does the app say 'Server connection error'?"
     This is usually due to three main reasons:
@@ -24,6 +24,12 @@ Answers to frequently asked questions and technical solutions for common issues 
 
 ??? question "The Ping command doesn't work! 'Request timed out' or '100% loss'"
     ICMP traffic is blocked on our servers. Check the server's availability via `ssh root@server-ip` instead.
+
+??? question "How can I pay for Amnezia Hosting?"
+    We accept **Visa** and **Mastercard** bank cards, as well as the **Freekassa** payment service. All invoices and payment history are available in your **Client Area** under the "Invoices" section.
+
+??? question "How do I get a refund for a server?"
+    Refund conditions are described in the **Refund and Compensation Policy**. To request a refund, open a ticket in your **Client Area** — the support team will guide you through the process.
 
 ---
 

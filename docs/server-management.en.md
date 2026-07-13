@@ -48,12 +48,12 @@ For the security of all hosting clients, the option to change the IP address you
 
 ## 📊 4. Dedicated Technical Resources
 
-Your server is guaranteed the following capacity, which is not shared with other users:
+Your server is guaranteed the following capacity, which is not shared with other users. It is enough for stable VPN performance with up to 10 devices connected at once:
 
-*   🧠 **Processor:** 1 dedicated CPU core
+*   🧠 **Processor:** 1 dedicated CPU core (1 × 2.2 GHz)
 *   ⚡ **RAM:** 1 GB RAM
-*   🌐 **Network:** Internet access speed up to 100 MB/s (with unlimited traffic)
-*   💾 **Storage:** 10 GB of ultra-fast SSD (NVMe) disk space
+*   🌐 **Network:** Up to 100 MB/s channel, unlimited traffic
+*   💾 **Storage:** 10 GB of fast SSD disk space
 
 ---
 

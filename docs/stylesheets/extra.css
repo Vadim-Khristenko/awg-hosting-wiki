@@ -1,57 +1,72 @@
-/* Принудительно красим базовые цвета темы */
-:root, [data-md-color-scheme="amnezia-dark"] {
-  /* Полностью черный фон для всего сайта */
+/* ============================================================
+   ЦВЕТОВАЯ СХЕМА (база — тёмная тема Material «slate»)
+   ============================================================ */
+:root,
+[data-md-color-scheme="slate"] {
+  /* Полностью тёмный фон для всего сайта */
   --md-default-bg-color: #0b0c10 !important;
   --md-default-bg-color--light: #12131a !important;
-  
-  /* Фон верхней шапки (делаем черным) */
+
+  /* Фон верхней шапки */
   --md-primary-fg-color: #0b0c10 !important;
   --md-primary-fg-color--dark: #000000 !important;
-  
-  /* Главный текст — контрастный белый/светло-серый */
+
+  /* Основной текст — контрастный светлый */
   --md-default-fg-color: #ffffff !important;
   --md-default-fg-color--light: #a3a3a3 !important;
   --md-default-fg-color--lighter: #525252 !important;
 
-  /* Неоново-зеленый акцент для ссылок, кнопок и иконок */
+  /* Неоново-зелёный акцент для ссылок, кнопок и иконок */
   --md-accent-fg-color: #00e63d !important;
   --md-accent-fg-color--transparent: rgba(0, 230, 61, 0.1) !important;
-  
+
   /* Цвет ссылок в тексте */
   --md-typeset-a-color: #00e63d !important;
-  
-  /* Стилизация кода (подсветка синтаксиса в теме Material) */
-  --md-code-fg-color: #85e89d !important; /* Меняет белый текст кода на пастельный зеленый */
-  --md-code-bg-color: #161b22 !important; /* Делает фон плашек кода чуть темнее и глубже */
+
+  /* Подсветка синтаксиса */
+  --md-code-fg-color: #85e89d !important;
+  --md-code-bg-color: #161b22 !important;
 }
 
-/* Принудительная замена белого цвета для инлайн-кода (одиночные команды в тексте) */
+/* Инлайн-код (одиночные команды в тексте) */
 .md-typeset code {
   color: #85e89d !important;
   background-color: #161b22 !important;
   font-weight: 600;
 }
 
-/* Принудительная замена белого цвета для больших блоков кода (многострочные команды) */
+/* Многострочные блоки кода */
 .md-typeset pre code {
   color: #85e89d !important;
 }
 
-/* Настройка шрифтов и отступов заголовков */
-.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+/* Заголовки */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
   color: #ffffff !important;
   font-weight: 800 !important;
 }
 
-/* Делаем боковое левое меню и правое оглавление белыми и читаемыми */
+/* Боковое меню и правое оглавление */
 .md-nav__link {
   color: #ffffff !important;
 }
-.md-nav__link--active, .md-nav__link:hover {
-  color: #00e63d !important; /* Зеленый при наведении */
+.md-nav__link--active,
+.md-nav__link:hover {
+  color: #00e63d !important;
 }
 
-/* Красим иконки в шапке (поиск, планета) в белый цвет */
+/* Названия групп-разделов в боковом меню */
+.md-nav__item--section > .md-nav__link {
+  color: #a3a3a3 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+}
+
+/* Иконки в шапке (поиск, язык) */
 .md-header__button {
   color: #ffffff !important;
 }
@@ -59,61 +74,131 @@
   color: #00e63d !important;
 }
 
-/* Фирменный зеленый класс для выделения слов */
+/* Фирменный зелёный класс для выделения слов */
 .green {
   color: #00e63d !important;
 }
-/* Стилизация списков категорий на главной странице Wiki */
+
+/* ============================================================
+   ТИПОГРАФИКА И СПИСКИ
+   ============================================================ */
 .md-typeset ul {
-    list-style-type: none;
-    padding-left: 0 !important;
+  list-style-type: none;
+  padding-left: 0 !important;
 }
 
 .md-typeset ul li {
-    margin-bottom: 16px !important;
-    line-height: 1.5;
+  margin-bottom: 16px !important;
+  line-height: 1.5;
 }
 
 /* Выделение ссылок на разделы жирным */
 .md-typeset ul li strong a {
-    font-size: 1.1rem;
-    font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
-/* Красивый разделитель страниц */
+/* Разделитель страниц */
 hr {
-    border-top: 1px solid #1e293b !important;
-    margin: 32px 0 !important;
+  border-top: 1px solid #1e293b !important;
+  margin: 32px 0 !important;
 }
-/* Эффект стекла для верхней панели навигации */
+
+/* ============================================================
+   «ЖИДКОЕ СТЕКЛО» — КАРТОЧКИ ГЛАВНОЙ СТРАНИЦЫ
+   Использование в Markdown:
+     <div class="grid cards" markdown> ... </div>
+   ============================================================ */
+.md-typeset .grid.cards > ul {
+  margin: 0;
+}
+
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > .card {
+  background: rgba(20, 22, 30, 0.55) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+  padding: 1.3rem 1.4rem !important;
+  margin: 0 !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > .card:hover {
+  border-color: rgba(0, 230, 61, 0.45) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(0, 230, 61, 0.12);
+}
+
+.md-typeset .grid.cards > ul > li > hr {
+  margin: 0.8rem 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ============================================================
+   «ЖИДКОЕ СТЕКЛО» — БЛОКИ ADMONITION И РАСКРЫВАЮЩИЕСЯ (details)
+   ============================================================ */
+.md-typeset .admonition,
+.md-typeset details {
+  background: rgba(20, 22, 30, 0.5) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.22);
+}
+
+/* ============================================================
+   «ЖИДКОЕ СТЕКЛО» — ТАБЛИЦЫ
+   ============================================================ */
+.md-typeset table:not([class]) {
+  background: rgba(20, 22, 30, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background: rgba(0, 230, 61, 0.08) !important;
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ============================================================
+   СТЕКЛО ШАПКИ И ПОИСКА
+   ============================================================ */
 .md-header {
-  /* Делаем черный фон полупрозрачным (альфа-канал 0.7) */
   background-color: rgba(11, 12, 16, 0.7) !important;
-  
-  /* Эффект размытия заднего плана (для современных браузеров) */
   backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important; /* Поддержка для Safari/iOS */
-  
-  /* Легкая тонкая граница снизу для усиления эффекта стекла */
+  -webkit-backdrop-filter: blur(12px) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  
-  /* Плавный переход при изменении состояний */
   transition: background-color 0.25s, backdrop-filter 0.25s !important;
 }
 
-/* Фикс для теневой подложки, чтобы она не перекрывала прозрачность */
 .md-header[data-md-state="shadow"] {
   background-color: rgba(11, 12, 16, 0.8) !important;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4) !important;
 }
-/* Эффект стекла для выпадающего поиска */
+
 .md-search__output {
-  background-color: rgba(18, 19, 26, 0.8) !important;
+  background-color: rgba(18, 19, 26, 0.85) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
-/* Красивый тонкий скроллбар */
+
+/* ============================================================
+   СКРОЛЛБАР
+   ============================================================ */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -128,36 +213,31 @@ hr {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 230, 97, 0.6);
 }
-/* Полоса прогресса чтения статьи */
+
+/* ============================================================
+   ПОЛОСА ПРОГРЕССА ЧТЕНИЯ
+   ============================================================ */
 #reading-progress-bar {
   position: absolute;
   left: 0;
-  /* КРЕПЛЕНИЕ СНИЗУ ШАПКИ: */
-  bottom: 0; 
-  
-  /* Если захотите перенести на самый ВЕРХ экрана, замените bottom на: top: 0; */
-  
-  height: 3px; /* Толщина полосы */
-  width: 0%;   /* Изначально не видна */
-  
-  /* Ваш фирменный неоново-зеленый цвет */
-  background: #00e63d !important; 
-  
-  /* Неоновое свечение (эффект подсветки) */
+  bottom: 0;
+  height: 3px;
+  width: 0%;
+  background: #00e63d !important;
   box-shadow: 0 0 10px #00e63d, 0 0 5px rgba(0, 230, 61, 0.5) !important;
-  
-  /* Плавное движение без рывков */
-  transition: width 0.1s ease-out !important; 
+  transition: width 0.1s ease-out !important;
   z-index: 999 !important;
 }
-/* Кастомная стилизация футера под ваши требования */
+
+/* ============================================================
+   ФУТЕР
+   ============================================================ */
 .md-footer-meta {
-  background-color: #050608 !important; /* Делаем футер чуть темнее общего фона */
+  background-color: #050608 !important;
   border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
   padding-top: 2rem !important;
 }
 
-/* Красивое оформление текста ООО внизу */
 .md-copyright {
   color: #a3a3a3 !important;
   line-height: 1.6 !important;
