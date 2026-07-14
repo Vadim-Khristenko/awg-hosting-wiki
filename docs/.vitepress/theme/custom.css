@@ -127,14 +127,24 @@ body {
 /* --------------------------------------------------------------------------
    4. ВЕРХНЯЯ ПАНЕЛЬ (стекло)
    -------------------------------------------------------------------------- */
-.VPNavBar,
-.VPNavBar:not(.top) .content-body {
-  background-color: color-mix(in srgb, var(--vp-c-bg) 72%, transparent) !important;
-  backdrop-filter: blur(14px) saturate(150%);
-  -webkit-backdrop-filter: blur(14px) saturate(150%);
-}
 .VPNavBar {
+  background-color: color-mix(in srgb, var(--vp-c-bg) 80%, transparent) !important;
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
   border-bottom: 1px solid var(--vp-c-divider);
+}
+/* Вложенные блоки прозрачны — стекло одним слоем, без «шва» и рамки
+   вокруг логотипа/поиска (в т.ч. на страницах с боковым меню). */
+.VPNavBar .title,
+.VPNavBar .content,
+.VPNavBar .content-body,
+.VPNavBar.has-sidebar .title,
+.VPNavBar.has-sidebar .content-body {
+  background-color: transparent !important;
+}
+.VPNavBar .divider,
+.VPNavBar .divider-line {
+  background-color: transparent !important;
 }
 
 /* --------------------------------------------------------------------------
