@@ -40,6 +40,20 @@
   --md-typeset-a-color: var(--amz-green-link);
   --md-code-bg-color: var(--amz-code-bg);
   --md-code-fg-color: var(--amz-code-fg);
+
+  /* Переменные, которые Material задаёт только для стандартных схем — иначе
+     они «падают» в светлые значения по умолчанию */
+  color-scheme: dark;
+  --md-typeset-color: var(--amz-text);
+  --md-admonition-fg-color: var(--amz-text);
+  --md-admonition-bg-color: var(--amz-surface-solid);
+  --md-typeset-table-color: var(--amz-border);
+  /* Футер всегда тёмный: непрозрачный фон + светлый текст */
+  --md-footer-bg-color: #050608;
+  --md-footer-bg-color--dark: #050608;
+  --md-footer-fg-color: #ffffff;
+  --md-footer-fg-color--light: #c2c6cd;
+  --md-footer-fg-color--lighter: #a3a3a3;
 }
 
 [data-md-color-scheme="amnezia-light"] {
@@ -74,6 +88,18 @@
   --md-typeset-a-color: var(--amz-green-link);
   --md-code-bg-color: var(--amz-code-bg);
   --md-code-fg-color: var(--amz-code-fg);
+
+  color-scheme: light;
+  --md-typeset-color: var(--amz-text);
+  --md-admonition-fg-color: var(--amz-text);
+  --md-admonition-bg-color: var(--amz-surface-solid);
+  --md-typeset-table-color: var(--amz-border);
+  /* Футер всегда тёмный, даже в светлой теме (в нём светлый текст) */
+  --md-footer-bg-color: #050608;
+  --md-footer-bg-color--dark: #050608;
+  --md-footer-fg-color: #ffffff;
+  --md-footer-fg-color--light: #c2c6cd;
+  --md-footer-fg-color--lighter: #a3a3a3;
 }
 
 /* --------------------------------------------------------------------------
@@ -418,10 +444,19 @@ input,
   border-radius: 12px !important;
   box-shadow: var(--amz-shadow-sm);
   font-size: 0.75rem;
+  color: var(--amz-text) !important;
+}
+/* Текст внутри admonition — принудительно читаемый в обеих темах */
+.md-typeset .admonition p,
+.md-typeset .admonition li,
+.md-typeset details p,
+.md-typeset details li {
+  color: var(--amz-text) !important;
 }
 .md-typeset .admonition-title,
 .md-typeset summary {
   background: var(--amz-surface) !important;
+  color: var(--amz-heading) !important;
   font-weight: 700;
 }
 
@@ -484,9 +519,11 @@ input,
 /* --------------------------------------------------------------------------
    15. ФУТЕР (всегда тёмный — в нём светлый текст с inline-стилями)
    -------------------------------------------------------------------------- */
-.md-footer,
-.md-footer-meta,
-.md-footer__inner {
+html body .md-footer,
+html body .md-footer-meta,
+html body .md-footer__inner,
+html body .md-copyright,
+html body .md-copyright__highlight {
   background-color: #050608 !important;
 }
 .md-footer-meta {
