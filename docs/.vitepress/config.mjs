@@ -24,6 +24,20 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.png',
     socialLinks,
+    footer: {
+      message: [
+        '<a href="https://amnezia.org" target="_blank" rel="noreferrer">Amnezia VPN</a>',
+        '<a href="https://amnezia.host" target="_blank" rel="noreferrer">Amnezia Hosting</a>',
+        '<a href="https://amnezia.host/privacy" target="_blank" rel="noreferrer">Privacy Policy</a>',
+        '<a href="https://amnezia.host/refund" target="_blank" rel="noreferrer">Refund and Compensation Policy</a>',
+        '<a href="https://amnezia.host/terms" target="_blank" rel="noreferrer">User Agreement</a>',
+        '<a href="https://t.me" target="_blank" rel="noreferrer">Telegram</a>',
+        '<a href="mailto:support@amnezia.host">support@amnezia.host</a>',
+        '<a href="mailto:abuse@amnezia.host" style="color:#ff5a5a">Report abuse</a>'
+      ].join('&nbsp;&nbsp;·&nbsp;&nbsp;'),
+      copyright:
+        'LLC "AIMor", Yerevan, 2 Avetis Aharonyan St. Registration number: 264.110.1229448 · © 2026 Amnezia Hosting'
+    },
     search: {
       provider: 'local',
       options: {

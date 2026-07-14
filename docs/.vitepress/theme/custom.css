@@ -296,67 +296,29 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   12. ФУТЕР (собственный, 3 колонки, всегда тёмный, адаптивный)
+   12. ФУТЕР (штатный VitePress) — контакты и юр. информация
    -------------------------------------------------------------------------- */
-.amz-footer {
-  background: var(--amz-footer-bg);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 44px 24px 40px;
+.VPFooter {
+  background: var(--vp-c-bg-alt);
+  border-top: 1px solid var(--vp-c-divider);
 }
-.amz-footer__cols {
+.VPFooter .container {
   max-width: 1152px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
 }
-.amz-footer__col h4 {
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 0.9rem;
-  margin: 0 0 12px;
-}
-.amz-footer__col a {
-  display: block;
-  color: #a8adb5;
+.VPFooter .message,
+.VPFooter .copyright {
+  color: var(--vp-c-text-2);
+  line-height: 2;
   font-size: 0.8rem;
-  line-height: 1.9;
+}
+.VPFooter .message a {
+  color: var(--vp-c-text-2);
+  font-weight: 600;
   text-decoration: none;
   transition: color 0.15s ease;
 }
-.amz-footer__col a:hover {
-  color: #35f069;
-}
-.amz-footer__abuse {
-  color: #ff5a5a !important;
-}
-.amz-footer__abuse:hover {
-  color: #ff7b7b !important;
-}
-.amz-footer__legal {
-  max-width: 1152px;
-  margin: 28px auto 0;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  color: #8b8f97;
-  font-size: 0.75rem;
-  line-height: 1.6;
-}
-
-/* На десктопе, где есть боковое меню, сдвигаем футер вправо от сайдбара,
-   чтобы колонки (в т.ч. Products) и юр. строка не уходили под него.
-   Главная (layout: home) сайдбара не имеет — там футер по центру. */
-@media (min-width: 960px) {
-  .Layout:has(.VPSidebar) .amz-footer {
-    padding-left: calc(var(--vp-sidebar-width, 272px) + 48px);
-    padding-right: 48px;
-  }
-  .Layout:has(.VPSidebar) .amz-footer__cols,
-  .Layout:has(.VPSidebar) .amz-footer__legal {
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
-  }
+.VPFooter .message a:hover {
+  color: var(--vp-c-brand-1);
 }
 
 /* --------------------------------------------------------------------------
