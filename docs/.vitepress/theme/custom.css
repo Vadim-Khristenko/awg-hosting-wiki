@@ -304,6 +304,22 @@ body {
   line-height: 1.6;
 }
 
+/* На десктопе, где слева есть боковое меню, сдвигаем контент футера вправо,
+   чтобы колонки (в т.ч. Products) и юр. строка не уходили под сайдбар.
+   На главной (layout: home) бокового меню нет — футер остаётся по центру. */
+@media (min-width: 960px) {
+  .Layout:has(.VPSidebar) .amz-footer {
+    padding-left: calc(var(--vp-sidebar-width, 272px) + 48px);
+    padding-right: 48px;
+  }
+  .Layout:has(.VPSidebar) .amz-footer__cols,
+  .Layout:has(.VPSidebar) .amz-footer__legal {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 /* --------------------------------------------------------------------------
    13. СКРОЛЛБАР
    -------------------------------------------------------------------------- */
