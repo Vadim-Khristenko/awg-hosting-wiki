@@ -1,0 +1,115 @@
+# 🖥️ Managing Your Amnezia VPS
+
+Welcome to the control panel for your virtual private server (VPS). This page brings together everything you need to control your server: connection details, available actions, and step-by-step instructions for beginners.
+
+## ⚙️ 1. Connection Details (Your Credentials)
+
+You need this information to configure VPN clients, connect to the server via the console, or pass it to third-party applications.
+
+::: danger IMPORTANT SECURITY RULE
+This information is strictly confidential. Never share it with third parties. Technical support staff will never ask you for your password.
+:::
+
+*   🌐 **Server IP Address:** `0.0.0.0` *(The main address of your server on the internet)*
+*   👤 **Username:** `root` *(The main system administrator with full privileges)*
+*   🔑 **Access Password:** `XXxxXX2026` *(Generated automatically when the server was created)*
+
+## 🛠️ 2. Available Actions in the Control Panel
+
+You can manage the physical state of your server directly from the control panel using these buttons:
+
+*   🚀 **Power On:** Starts the server's operating system if it was shut down.
+*   🛑 **Shutdown:** Sends a signal to the operating system to safely terminate all processes and power off. We recommend using this option.
+*   ⚡ **Power Off:** Instantly cuts power to the server. Use only if the server has frozen and does not respond to the regular `Shutdown` command.
+*   🔄 **Reboot:** Performs a quick restart of the server to refresh the configuration or apply settings.
+*   🔑 **Reset Password:** Erases the current administrator password and generates a new one. **Note:** before clicking this button, you must shut the server down first with the `Shutdown` command.
+*   💳 **Renew Service:** A quick link to the payment gateway to top up your balance and extend the lease.
+
+## ⚠️ 3. Security and Resolving Critical Issues
+
+We care about keeping your work stable, so the panel enforces restrictions designed to protect your data.
+
+### 🚨 What to do if the status changes to "Broken State"?
+
+If you see **Broken State** in the server status field, or if the server has stopped powering on for any reason and does not respond to the `Power On` / `Reboot` buttons:
+
+1. Do not repeatedly click the control buttons — this may worsen the error inside the virtual container.
+2. Immediately **open a ticket with our technical support**. Our engineers will manually check the state of the node (the physical hardware) and restore access as quickly as possible.
+
+### 🔒 Why can't I change the IP address myself?
+
+For the security of all hosting clients, the option to change the IP address yourself in the panel is disabled. This prevents accidental loss of connection to the server and protects against fraudulent activity.
+
+*   If you genuinely need to replace your IP address (for example, due to blocking by providers), **contact support**.
+*   Our specialists will quickly verify your account and replace the address manually for your safety.
+
+## 📊 4. Dedicated Technical Resources
+
+Your server is guaranteed the following capacity, which is not shared with other users. It is enough for stable VPN performance with up to 10 devices connected at once:
+
+*   🧠 **Processor:** 1 dedicated CPU core (1 × 2.2 GHz)
+*   ⚡ **RAM:** 1 GB RAM
+*   🌐 **Network:** Up to 100 MB/s channel, unlimited traffic
+*   💾 **Storage:** 10 GB of fast SSD disk space
+
+## 📖 5. Detailed Connection Instructions (For Beginners)
+
+If you need to install additional software on the server, configure a proxy, or check the configuration, you will need to connect to the server's text console over the **SSH** protocol.
+
+### Step 1: Open a terminal on your PC
+
+*   **On Windows:** Press `Win + R` on your keyboard, type `cmd` in the window that opens, and press Enter. A black command-line window will appear.
+*   **On macOS or Linux:** Use the app search to find the **Terminal** program and launch it.
+
+### Step 2: Enter the connection command
+
+In the terminal, enter the following command (replace `0.0.0.0` with your real IP address from Section 1) and press Enter:
+
+```bash
+ssh root@0.0.0.0
+```
+
+### Step 3: Confirm the security prompt
+
+On the very first connection, your computer will ask whether you trust this server:
+
+> *Are you sure you want to continue connecting (yes/no/[fingerprint])?*
+
+*   Type the word **`yes`** and press Enter.
+
+### Step 4: Enter the access password
+
+The system will ask for the secret key: `root@0.0.0.0's password:`
+
+1. Copy your password (`XXxxXX2026`).
+2. Right-click in the terminal window (or press `Shift + Insert`) to paste the password.
+3. Press Enter.
+
+::: warning The password is not shown — this is normal
+When you paste or type a password in the terminal, **nothing appears on screen (no characters, asterisks, or dots)**. This is a built-in protection of Unix systems. The password is still entered successfully — just press Enter.
+:::
+
+## 🗲 6. Basic Commands Cheat Sheet
+
+After a successful login, you will see the system greeting. Here are the main commands that may come in handy:
+
+*   **Fully update the system to the latest version:**
+    ```bash
+    apt update && apt upgrade -y
+    ```
+*   **Check how much free space is left on the disk:**
+    ```bash
+    df -h
+    ```
+*   **Launch the task manager to view CPU and memory load** *(press `Q` to exit)*:
+    ```bash
+    htop
+    ```
+*   **Force a reboot of the server from inside the system:**
+    ```bash
+    reboot
+    ```
+*   **Safely close the connection to the server and the terminal:**
+    ```bash
+    exit
+    ```

@@ -4,16 +4,13 @@ on:
   push:
     branches:
       - main
-  # Allow running the workflow manually from the Actions tab
   workflow_dispatch:
 
-# Grant the token the permissions required to publish to Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment; don't cancel an in-progress run
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -25,24 +22,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # нужно для «Обновлено» (git-таймстампы lastUpdated)
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          python-version: "3.12"
-          cache: pip
+          node-version: 20
+          cache: npm
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: npm ci
 
-      - name: Build site
-        run: mkdocs build --strict
+      - name: Build with VitePress
+        run: npm run docs:build
 
-      - name: Upload Pages artifact
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: docs/.vitepress/dist
 
   deploy:
     needs: build

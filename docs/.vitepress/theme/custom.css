@@ -1,0 +1,391 @@
+/* ==========================================================================
+   AMNEZIA HOSTING DOCS — VitePress custom theme
+   Тёмная тема: чёрный фон + неоново-зелёный акцент (#00e63d).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. ЦВЕТА (переопределение переменных VitePress)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Бренд — зелёный */
+  --vp-c-brand-1: #2bf062;
+  --vp-c-brand-2: #00e63d;
+  --vp-c-brand-3: #00c437;
+  --vp-c-brand-soft: rgba(0, 230, 61, 0.16);
+  --vp-c-brand-softer: rgba(0, 230, 61, 0.08);
+
+  /* Фон */
+  --vp-c-bg: #0a0b0d;
+  --vp-c-bg-alt: #060709;
+  --vp-c-bg-elv: #101216;
+  --vp-c-bg-soft: #101216;
+
+  /* Текст */
+  --vp-c-text-1: #e7e9ee;
+  --vp-c-text-2: #b4b8c0;
+  --vp-c-text-3: #7a828d;
+
+  /* Границы / разделители */
+  --vp-c-divider: rgba(255, 255, 255, 0.09);
+  --vp-c-border: rgba(255, 255, 255, 0.12);
+  --vp-c-gutter: #050608;
+
+  /* Кнопки (бренд) */
+  --vp-button-brand-bg: #00c437;
+  --vp-button-brand-hover-bg: #00e63d;
+  --vp-button-brand-active-bg: #00a82e;
+  --vp-button-brand-text: #04140a;
+  --vp-button-brand-hover-text: #04140a;
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-hover-border: transparent;
+
+  /* Hero главной */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #00e63d 20%, #57ff88);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, rgba(0, 230, 61, 0.5), rgba(0, 120, 40, 0.35));
+  --vp-home-hero-image-filter: blur(60px);
+
+  /* Код */
+  --vp-code-color: #85e89d;
+  --vp-code-bg: #0d1117;
+  --vp-code-block-bg: #0d1117;
+
+  /* Мягкий брендовый акцент для ссылок */
+  --vp-c-brand: var(--vp-c-brand-1);
+
+  font-synthesis: none;
+}
+
+/* Код-шрифт: предпочитаем Roboto Mono, аккуратный фолбэк */
+:root {
+  --vp-font-family-mono: "Roboto Mono", ui-monospace, "SFMono-Regular",
+    "Menlo", "Consolas", monospace;
+}
+
+/* --------------------------------------------------------------------------
+   2. ОБЩИЙ ФОН + мягкий зелёный градиент
+   -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--vp-c-bg);
+  background-image: radial-gradient(1200px 620px at 85% -8%, rgba(0, 230, 61, 0.07), transparent 60%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* --------------------------------------------------------------------------
+   3. ВЕРХНЯЯ ПАНЕЛЬ (стекло)
+   -------------------------------------------------------------------------- */
+.VPNavBar:not(.top) .content-body,
+.VPNavBar {
+  background-color: rgba(10, 11, 13, 0.72) !important;
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+}
+.VPNavBar {
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+/* --------------------------------------------------------------------------
+   4. HERO ГЛАВНОЙ
+   -------------------------------------------------------------------------- */
+.VPHero .name {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+.VPHero .text {
+  font-weight: 800;
+  color: var(--vp-c-text-1);
+}
+.VPHero .tagline {
+  color: var(--vp-c-text-2);
+}
+
+/* --------------------------------------------------------------------------
+   5. КАРТОЧКИ-ФИЧИ (жидкое стекло + анимация)
+   -------------------------------------------------------------------------- */
+.VPFeature {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid var(--vp-c-divider) !important;
+  border-radius: 16px !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.22s ease, border-color 0.22s ease,
+    box-shadow 0.22s ease, background 0.22s ease;
+}
+.VPFeature:hover {
+  transform: translateY(-5px);
+  border-color: var(--vp-c-brand-2) !important;
+  background: var(--vp-c-brand-softer) !important;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--vp-c-brand-soft);
+}
+.VPFeature .icon {
+  background: var(--vp-c-brand-soft) !important;
+  border-radius: 12px !important;
+}
+.VPFeature .title {
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   6. КНОПКИ
+   -------------------------------------------------------------------------- */
+.VPButton.brand {
+  box-shadow: 0 6px 20px rgba(0, 230, 61, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.VPButton.brand:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 230, 61, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   7. КОНТЕНТ: заголовки, ссылки, акцент
+   -------------------------------------------------------------------------- */
+.vp-doc h1 {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+.vp-doc h2 {
+  font-weight: 800;
+  border-top: none;
+  padding-top: 1.4rem;
+  margin-top: 2.6rem;
+}
+.vp-doc h3 {
+  font-weight: 700;
+}
+.vp-doc a {
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+.vp-doc a:hover {
+  opacity: 0.8;
+}
+.green {
+  background: linear-gradient(120deg, #00e63d, #57ff88);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #00e63d;
+  font-weight: inherit;
+}
+
+/* --------------------------------------------------------------------------
+   8. БЛОКИ КОДА
+   -------------------------------------------------------------------------- */
+.vp-doc div[class*="language-"] {
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-divider);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+.vp-doc :not(pre) > code {
+  color: #85e89d;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   9. CUSTOM-БЛОКИ (::: tip / info / warning / danger / details) — стекло
+   -------------------------------------------------------------------------- */
+.vp-doc .custom-block {
+  border-radius: 12px;
+  border-width: 1px;
+  border-style: solid;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+.vp-doc .custom-block.tip {
+  border-color: var(--vp-c-brand-soft);
+  background: var(--vp-c-brand-softer);
+}
+.vp-doc .custom-block.tip .custom-block-title {
+  color: var(--vp-c-brand-1);
+}
+.vp-doc .custom-block a {
+  color: var(--vp-c-brand-1);
+}
+
+/* --------------------------------------------------------------------------
+   10. ТАБЛИЦЫ
+   -------------------------------------------------------------------------- */
+.vp-doc table {
+  display: table;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+}
+.vp-doc tr {
+  background: transparent;
+  border-top: 1px solid var(--vp-c-divider);
+  transition: background 0.15s ease;
+}
+.vp-doc tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+.vp-doc th {
+  background: var(--vp-c-brand-softer);
+  color: var(--vp-c-text-1);
+  font-weight: 700;
+}
+.vp-doc th,
+.vp-doc td {
+  border: none;
+  border-right: 1px solid var(--vp-c-divider);
+}
+
+/* --------------------------------------------------------------------------
+   11. НАВИГАЦИЯ (сайдбар)
+   -------------------------------------------------------------------------- */
+.VPSidebarItem.level-0 > .item > .text {
+  color: var(--vp-c-text-3);
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 0.07em;
+  font-weight: 700;
+}
+.VPSidebarItem.is-active > .item .link .text {
+  color: var(--vp-c-brand-1);
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   12. ФУТЕР (собственный, в 3 колонки, адаптивный)
+   -------------------------------------------------------------------------- */
+.amz-footer {
+  background: #050608;
+  border-top: 1px solid var(--vp-c-divider);
+  padding: 44px 24px 40px;
+}
+.amz-footer__cols {
+  max-width: 1152px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.amz-footer__col h4 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 0 0 12px;
+}
+.amz-footer__col a {
+  display: block;
+  color: #a3a3a3;
+  font-size: 0.8rem;
+  line-height: 1.9;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.amz-footer__col a:hover {
+  color: var(--vp-c-brand-1);
+}
+.amz-footer__abuse {
+  color: #ff4a4a !important;
+}
+.amz-footer__abuse:hover {
+  color: #ff6b6b !important;
+}
+.amz-footer__legal {
+  max-width: 1152px;
+  margin: 28px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--vp-c-divider);
+  color: #757575;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   13. СКРОЛЛБАР
+   -------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 230, 61, 0.3);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 230, 61, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   14. ПЛАВНЫЕ АНИМАЦИИ (появление контента)
+   -------------------------------------------------------------------------- */
+@keyframes amz-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.VPContent .vp-doc > div > * {
+  animation: amz-fade-up 0.5s ease both;
+}
+.VPHome .VPHero {
+  animation: amz-fade-up 0.6s ease both;
+}
+.VPHome .VPFeatures {
+  animation: amz-fade-up 0.7s ease both;
+}
+/* Лёгкий stagger для карточек */
+.VPFeatures .items .item:nth-child(1) .VPFeature { animation: amz-fade-up 0.5s ease both 0.05s; }
+.VPFeatures .items .item:nth-child(2) .VPFeature { animation: amz-fade-up 0.5s ease both 0.1s; }
+.VPFeatures .items .item:nth-child(3) .VPFeature { animation: amz-fade-up 0.5s ease both 0.15s; }
+.VPFeatures .items .item:nth-child(4) .VPFeature { animation: amz-fade-up 0.5s ease both 0.2s; }
+.VPFeatures .items .item:nth-child(5) .VPFeature { animation: amz-fade-up 0.5s ease both 0.25s; }
+.VPFeatures .items .item:nth-child(6) .VPFeature { animation: amz-fade-up 0.5s ease both 0.3s; }
+.VPFeatures .items .item:nth-child(7) .VPFeature { animation: amz-fade-up 0.5s ease both 0.35s; }
+.VPFeatures .items .item:nth-child(8) .VPFeature { animation: amz-fade-up 0.5s ease both 0.4s; }
+
+/* --------------------------------------------------------------------------
+   15. МОБИЛЬНАЯ АДАПТАЦИЯ
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .amz-footer {
+    padding: 32px 20px 28px;
+  }
+  .amz-footer__cols {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+  .vp-doc h1 {
+    font-size: 1.7rem;
+  }
+  .vp-doc table {
+    font-size: 0.82rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   16. ДОСТУПНОСТЬ: уважаем «уменьшить движение»
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  .VPContent .vp-doc > div > *,
+  .VPHome .VPHero,
+  .VPHome .VPFeatures,
+  .VPFeature {
+    animation: none !important;
+    transition: none !important;
+  }
+}
