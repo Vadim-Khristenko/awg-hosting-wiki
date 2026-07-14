@@ -40,6 +40,10 @@ features:
     title: Hysteria 2
     details: Manual setup of the fast Hysteria 2 protocol with masquerade.
     link: /en/hysteria2
+  - icon: 🔒
+    title: Server Security
+    details: UFW, changing the SSH port, fail2ban, and basic VPS hardening.
+    link: /en/security
   - icon: ❓
     title: Troubleshooting (FAQ)
     details: Answers to common questions and fixes for typical connection errors.

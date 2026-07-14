@@ -40,6 +40,10 @@ features:
     title: Hysteria 2
     details: Ручная установка быстрого протокола Hysteria 2 с маскировкой.
     link: /hysteria2
+  - icon: 🔒
+    title: Безопасность сервера
+    details: UFW, смена порта SSH, fail2ban и базовый харденинг VPS.
+    link: /security
   - icon: ❓
     title: Решение проблем (FAQ)
     details: Ответы на частые вопросы и разбор типовых ошибок подключения.

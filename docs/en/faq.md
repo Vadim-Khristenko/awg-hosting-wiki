@@ -37,6 +37,14 @@ We accept **Visa** and **Mastercard** bank cards, as well as the **Freekassa** p
 Refund conditions are described in the **Refund and Compensation Policy**. To request a refund, open a ticket in your **Client Area** — the support team will guide you through the process.
 :::
 
+::: details How do I protect my server from hacking?
+Set up the UFW firewall, change the default SSH port, and enable fail2ban. See the **[Server Security](/en/security)** section for step-by-step instructions.
+:::
+
+::: details How do I change the root password?
+Connect via SSH and run `passwd` — the system will ask for the new password twice. You can also reissue the password with the **Reset Password** button in your client area (the server must be powered off first).
+:::
+
 ## 🔧 Technical Support
 
 If your problem is not listed here, or you need personalized assistance with your Amnezia Hosting servers:

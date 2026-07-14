@@ -43,7 +43,12 @@ Here is the basic set of Linux commands that every administrator needs:
 | `pwd` | Show the current folder you are in |
 | `ls -la` | List all files and folders in the current directory |
 | `cd /path/to/folder` | Change to another folder |
+| `df -h` | Show how much free disk space is left |
+| `free -h` | Show RAM usage |
 | `htop` | Launch the task manager (CPU and RAM monitoring) |
+| `nano file` | Open a text file in the editor (exit with `Ctrl + X`) |
+| `apt install package` | Install a program from the repository |
+| `systemctl status service` | Check a service's status (e.g., `ssh`) |
 | `reboot` | Reboot your server |
 
 ## 🛡️ Next Step

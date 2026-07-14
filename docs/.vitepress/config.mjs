@@ -10,7 +10,7 @@ export default defineConfig({
   description: 'VPS-серверы для собственного VPN без сложной настройки. Руководства по подключению, настройке VPN и управлению сервером.',
   base: '/hosting-docs/',
   cleanUrls: false,
-  appearance: 'force-dark', // только тёмная тема, переключатель скрыт
+  appearance: 'dark', // по умолчанию тёмная тема, доступен переключатель на светлую
   lastUpdated: true,
   metaChunk: true,
 
@@ -68,7 +68,8 @@ export default defineConfig({
               { text: '🛡️ Настройка VPN', link: '/vpn-setup' },
               { text: '🔌 Протоколы', link: '/protocols' },
               { text: '📊 Панель 3X-UI', link: '/3x-ui' },
-              { text: '⚡ Hysteria 2', link: '/hysteria2' }
+              { text: '⚡ Hysteria 2', link: '/hysteria2' },
+              { text: '🔒 Безопасность сервера', link: '/security' }
             ]
           },
           {
@@ -110,7 +111,8 @@ export default defineConfig({
               { text: '🛡️ VPN Setup', link: '/en/vpn-setup' },
               { text: '🔌 Protocols', link: '/en/protocols' },
               { text: '📊 3X-UI Panel', link: '/en/3x-ui' },
-              { text: '⚡ Hysteria 2', link: '/en/hysteria2' }
+              { text: '⚡ Hysteria 2', link: '/en/hysteria2' },
+              { text: '🔒 Server Security', link: '/en/security' }
             ]
           },
           {

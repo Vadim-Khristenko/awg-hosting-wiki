@@ -1,86 +1,135 @@
 /* ==========================================================================
    AMNEZIA HOSTING DOCS — VitePress custom theme
-   Тёмная тема: чёрный фон + неоново-зелёный акцент (#00e63d).
+   Две темы: светлая (:root) и тёмная (.dark). Акцент — зелёный.
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. ЦВЕТА (переопределение переменных VitePress)
+   1. СВЕТЛАЯ ТЕМА (по умолчанию для :root)
    -------------------------------------------------------------------------- */
 :root {
-  /* Бренд — зелёный */
-  --vp-c-brand-1: #2bf062;
+  /* Бренд — насыщенный зелёный, читаемый на белом */
+  --vp-c-brand-1: #0a8f2b;
+  --vp-c-brand-2: #0a9e30;
+  --vp-c-brand-3: #00b833;
+  --vp-c-brand-soft: rgba(0, 184, 51, 0.14);
+  --vp-c-brand-softer: rgba(0, 184, 51, 0.07);
+
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f5f7f9;
+  --vp-c-bg-soft: #f1f3f5;
+  --vp-c-bg-elv: #ffffff;
+
+  --vp-c-text-1: #1b1f24;
+  --vp-c-text-2: #48505b;
+  --vp-c-text-3: #6b7280;
+
+  --vp-c-divider: rgba(20, 24, 28, 0.1);
+  --vp-c-border: rgba(20, 24, 28, 0.16);
+  --vp-c-gutter: rgba(20, 24, 28, 0.12);
+
+  --vp-code-color: #0a7d29;
+  --vp-code-bg: #f0f3f6;
+
+  /* Кастомные токены (стекло/поверхности/футер) */
+  --amz-surface: rgba(20, 24, 28, 0.025);
+  --amz-surface-hover: rgba(0, 184, 51, 0.08);
+  --amz-glass-border: rgba(20, 24, 28, 0.1);
+  --amz-shadow: 0 6px 26px rgba(20, 30, 24, 0.12);
+  --amz-shadow-sm: 0 4px 16px rgba(20, 30, 24, 0.08);
+  --amz-bg-glow: radial-gradient(1200px 620px at 85% -8%, rgba(0, 184, 51, 0.09), transparent 60%);
+
+  /* Hero */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #00a82e, #0a7d29);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, rgba(0, 184, 51, 0.35), rgba(0, 120, 40, 0.2));
+  --vp-home-hero-image-filter: blur(56px);
+
+  /* Кнопки */
+  --vp-button-brand-bg: #00b833;
+  --vp-button-brand-hover-bg: #0a9e30;
+  --vp-button-brand-active-bg: #0a8f2b;
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-hover-text: #ffffff;
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-hover-border: transparent;
+
+  /* Футер — всегда тёмный (в нём светлый текст) */
+  --amz-footer-bg: #0a0b0d;
+
+  font-synthesis: none;
+  --vp-font-family-mono: "Roboto Mono", ui-monospace, "SFMono-Regular", "Menlo",
+    "Consolas", monospace;
+}
+
+/* --------------------------------------------------------------------------
+   2. ТЁМНАЯ ТЕМА
+   -------------------------------------------------------------------------- */
+.dark {
+  --vp-c-brand-1: #35f069;
   --vp-c-brand-2: #00e63d;
   --vp-c-brand-3: #00c437;
   --vp-c-brand-soft: rgba(0, 230, 61, 0.16);
   --vp-c-brand-softer: rgba(0, 230, 61, 0.08);
 
-  /* Фон */
   --vp-c-bg: #0a0b0d;
   --vp-c-bg-alt: #060709;
-  --vp-c-bg-elv: #101216;
-  --vp-c-bg-soft: #101216;
+  --vp-c-bg-soft: #12141a;
+  --vp-c-bg-elv: #12141a;
 
-  /* Текст */
-  --vp-c-text-1: #e7e9ee;
-  --vp-c-text-2: #b4b8c0;
-  --vp-c-text-3: #7a828d;
+  --vp-c-text-1: #eceef2;
+  --vp-c-text-2: #c2c6ce;
+  --vp-c-text-3: #8b93a0;
 
-  /* Границы / разделители */
-  --vp-c-divider: rgba(255, 255, 255, 0.09);
-  --vp-c-border: rgba(255, 255, 255, 0.12);
+  --vp-c-divider: rgba(255, 255, 255, 0.1);
+  --vp-c-border: rgba(255, 255, 255, 0.14);
   --vp-c-gutter: #050608;
 
-  /* Кнопки (бренд) */
+  --vp-code-color: #85e89d;
+  --vp-code-bg: #0d1117;
+
+  --amz-surface: rgba(255, 255, 255, 0.035);
+  --amz-surface-hover: rgba(0, 230, 61, 0.07);
+  --amz-glass-border: rgba(255, 255, 255, 0.1);
+  --amz-shadow: 0 6px 28px rgba(0, 0, 0, 0.5);
+  --amz-shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.38);
+  --amz-bg-glow: radial-gradient(1200px 620px at 85% -8%, rgba(0, 230, 61, 0.08), transparent 60%);
+
+  --vp-home-hero-name-background: linear-gradient(120deg, #00e63d 20%, #57ff88);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, rgba(0, 230, 61, 0.5), rgba(0, 120, 40, 0.35));
+  --vp-home-hero-image-filter: blur(60px);
+
   --vp-button-brand-bg: #00c437;
   --vp-button-brand-hover-bg: #00e63d;
   --vp-button-brand-active-bg: #00a82e;
   --vp-button-brand-text: #04140a;
   --vp-button-brand-hover-text: #04140a;
-  --vp-button-brand-border: transparent;
-  --vp-button-brand-hover-border: transparent;
 
-  /* Hero главной */
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(120deg, #00e63d 20%, #57ff88);
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, rgba(0, 230, 61, 0.5), rgba(0, 120, 40, 0.35));
-  --vp-home-hero-image-filter: blur(60px);
-
-  /* Код */
-  --vp-code-color: #85e89d;
-  --vp-code-bg: #0d1117;
-  --vp-code-block-bg: #0d1117;
-
-  /* Мягкий брендовый акцент для ссылок */
-  --vp-c-brand: var(--vp-c-brand-1);
-
-  font-synthesis: none;
-}
-
-/* Код-шрифт: предпочитаем Roboto Mono, аккуратный фолбэк */
-:root {
-  --vp-font-family-mono: "Roboto Mono", ui-monospace, "SFMono-Regular",
-    "Menlo", "Consolas", monospace;
+  --amz-footer-bg: #050608;
 }
 
 /* --------------------------------------------------------------------------
-   2. ОБЩИЙ ФОН + мягкий зелёный градиент
+   3. БАЗА
    -------------------------------------------------------------------------- */
 html {
   scroll-behavior: smooth;
 }
 body {
   background-color: var(--vp-c-bg);
-  background-image: radial-gradient(1200px 620px at 85% -8%, rgba(0, 230, 61, 0.07), transparent 60%);
+  background-image: var(--amz-bg-glow);
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
+.vp-doc code,
+.vp-doc pre code {
+  font-family: var(--vp-font-family-mono);
+}
 
 /* --------------------------------------------------------------------------
-   3. ВЕРХНЯЯ ПАНЕЛЬ (стекло)
+   4. ВЕРХНЯЯ ПАНЕЛЬ (стекло)
    -------------------------------------------------------------------------- */
-.VPNavBar:not(.top) .content-body,
-.VPNavBar {
-  background-color: rgba(10, 11, 13, 0.72) !important;
+.VPNavBar,
+.VPNavBar:not(.top) .content-body {
+  background-color: color-mix(in srgb, var(--vp-c-bg) 72%, transparent) !important;
   backdrop-filter: blur(14px) saturate(150%);
   -webkit-backdrop-filter: blur(14px) saturate(150%);
 }
@@ -89,7 +138,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   4. HERO ГЛАВНОЙ
+   5. HERO
    -------------------------------------------------------------------------- */
 .VPHero .name {
   font-weight: 900;
@@ -104,11 +153,11 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   5. КАРТОЧКИ-ФИЧИ (жидкое стекло + анимация)
+   6. КАРТОЧКИ-ФИЧИ (стекло + анимация)
    -------------------------------------------------------------------------- */
 .VPFeature {
-  background: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid var(--vp-c-divider) !important;
+  background: var(--amz-surface) !important;
+  border: 1px solid var(--amz-glass-border) !important;
   border-radius: 16px !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -118,8 +167,8 @@ body {
 .VPFeature:hover {
   transform: translateY(-5px);
   border-color: var(--vp-c-brand-2) !important;
-  background: var(--vp-c-brand-softer) !important;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--vp-c-brand-soft);
+  background: var(--amz-surface-hover) !important;
+  box-shadow: var(--amz-shadow), 0 0 0 1px var(--vp-c-brand-soft);
 }
 .VPFeature .icon {
   background: var(--vp-c-brand-soft) !important;
@@ -130,19 +179,19 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   6. КНОПКИ
+   7. КНОПКИ
    -------------------------------------------------------------------------- */
 .VPButton.brand {
-  box-shadow: 0 6px 20px rgba(0, 230, 61, 0.25);
+  box-shadow: 0 6px 20px var(--vp-c-brand-soft);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .VPButton.brand:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(0, 230, 61, 0.4);
+  box-shadow: 0 10px 28px var(--vp-c-brand-soft);
 }
 
 /* --------------------------------------------------------------------------
-   7. КОНТЕНТ: заголовки, ссылки, акцент
+   8. КОНТЕНТ
    -------------------------------------------------------------------------- */
 .vp-doc h1 {
   font-weight: 900;
@@ -166,49 +215,39 @@ body {
   opacity: 0.8;
 }
 .green {
-  background: linear-gradient(120deg, #00e63d, #57ff88);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #00e63d;
-  font-weight: inherit;
+  color: var(--vp-c-brand-1);
+  font-weight: 800;
 }
 
-/* --------------------------------------------------------------------------
-   8. БЛОКИ КОДА
-   -------------------------------------------------------------------------- */
 .vp-doc div[class*="language-"] {
   border-radius: 12px;
   border: 1px solid var(--vp-c-divider);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--amz-shadow-sm);
 }
 .vp-doc :not(pre) > code {
-  color: #85e89d;
-  background: var(--vp-c-bg-soft);
+  color: var(--vp-code-color);
+  background: var(--vp-code-bg);
   border: 1px solid var(--vp-c-divider);
   border-radius: 6px;
   font-weight: 600;
 }
 
 /* --------------------------------------------------------------------------
-   9. CUSTOM-БЛОКИ (::: tip / info / warning / danger / details) — стекло
+   9. CUSTOM-БЛОКИ (::: tip / info / warning / danger / details)
    -------------------------------------------------------------------------- */
 .vp-doc .custom-block {
   border-radius: 12px;
   border-width: 1px;
   border-style: solid;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: var(--amz-shadow-sm);
 }
 .vp-doc .custom-block.tip {
   border-color: var(--vp-c-brand-soft);
   background: var(--vp-c-brand-softer);
 }
 .vp-doc .custom-block.tip .custom-block-title {
-  color: var(--vp-c-brand-1);
-}
-.vp-doc .custom-block a {
   color: var(--vp-c-brand-1);
 }
 
@@ -228,7 +267,7 @@ body {
   transition: background 0.15s ease;
 }
 .vp-doc tr:hover {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--amz-surface);
 }
 .vp-doc th {
   background: var(--vp-c-brand-softer);
@@ -242,7 +281,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   11. НАВИГАЦИЯ (сайдбар)
+   11. САЙДБАР
    -------------------------------------------------------------------------- */
 .VPSidebarItem.level-0 > .item > .text {
   color: var(--vp-c-text-3);
@@ -257,11 +296,11 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   12. ФУТЕР (собственный, в 3 колонки, адаптивный)
+   12. ФУТЕР (собственный, 3 колонки, всегда тёмный, адаптивный)
    -------------------------------------------------------------------------- */
 .amz-footer {
-  background: #050608;
-  border-top: 1px solid var(--vp-c-divider);
+  background: var(--amz-footer-bg);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 44px 24px 40px;
 }
 .amz-footer__cols {
@@ -279,34 +318,34 @@ body {
 }
 .amz-footer__col a {
   display: block;
-  color: #a3a3a3;
+  color: #a8adb5;
   font-size: 0.8rem;
   line-height: 1.9;
   text-decoration: none;
   transition: color 0.15s ease;
 }
 .amz-footer__col a:hover {
-  color: var(--vp-c-brand-1);
+  color: #35f069;
 }
 .amz-footer__abuse {
-  color: #ff4a4a !important;
+  color: #ff5a5a !important;
 }
 .amz-footer__abuse:hover {
-  color: #ff6b6b !important;
+  color: #ff7b7b !important;
 }
 .amz-footer__legal {
   max-width: 1152px;
   margin: 28px auto 0;
   padding-top: 20px;
-  border-top: 1px solid var(--vp-c-divider);
-  color: #757575;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #8b8f97;
   font-size: 0.75rem;
   line-height: 1.6;
 }
 
-/* На десктопе, где слева есть боковое меню, сдвигаем контент футера вправо,
-   чтобы колонки (в т.ч. Products) и юр. строка не уходили под сайдбар.
-   На главной (layout: home) бокового меню нет — футер остаётся по центру. */
+/* На десктопе, где есть боковое меню, сдвигаем футер вправо от сайдбара,
+   чтобы колонки (в т.ч. Products) и юр. строка не уходили под него.
+   Главная (layout: home) сайдбара не имеет — там футер по центру. */
 @media (min-width: 960px) {
   .Layout:has(.VPSidebar) .amz-footer {
     padding-left: calc(var(--vp-sidebar-width, 272px) + 48px);
@@ -331,15 +370,15 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 230, 61, 0.3);
+  background: var(--vp-c-brand-soft);
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 230, 61, 0.6);
+  background: var(--vp-c-brand-2);
 }
 
 /* --------------------------------------------------------------------------
-   14. ПЛАВНЫЕ АНИМАЦИИ (появление контента)
+   14. ПЛАВНЫЕ АНИМАЦИИ
    -------------------------------------------------------------------------- */
 @keyframes amz-fade-up {
   from {
@@ -357,10 +396,6 @@ body {
 .VPHome .VPHero {
   animation: amz-fade-up 0.6s ease both;
 }
-.VPHome .VPFeatures {
-  animation: amz-fade-up 0.7s ease both;
-}
-/* Лёгкий stagger для карточек */
 .VPFeatures .items .item:nth-child(1) .VPFeature { animation: amz-fade-up 0.5s ease both 0.05s; }
 .VPFeatures .items .item:nth-child(2) .VPFeature { animation: amz-fade-up 0.5s ease both 0.1s; }
 .VPFeatures .items .item:nth-child(3) .VPFeature { animation: amz-fade-up 0.5s ease both 0.15s; }
@@ -390,7 +425,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   16. ДОСТУПНОСТЬ: уважаем «уменьшить движение»
+   16. reduce-motion
    -------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -399,7 +434,6 @@ body {
   *,
   .VPContent .vp-doc > div > *,
   .VPHome .VPHero,
-  .VPHome .VPFeatures,
   .VPFeature {
     animation: none !important;
     transition: none !important;
