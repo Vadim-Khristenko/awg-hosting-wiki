@@ -81,6 +81,8 @@ export default defineConfig({
             items: [
               { text: '🛡️ Настройка VPN', link: '/vpn-setup' },
               { text: '🔌 Протоколы', link: '/protocols' },
+              { text: '🛡️ AmneziaWG (AWG)', link: '/awg' },
+              { text: '🎭 VLESS + Reality', link: '/vless' },
               { text: '📊 Панель 3X-UI', link: '/3x-ui' },
               { text: '⚡ Hysteria 2', link: '/hysteria2' },
               { text: '🔒 Безопасность сервера', link: '/security' }
@@ -124,6 +126,8 @@ export default defineConfig({
             items: [
               { text: '🛡️ VPN Setup', link: '/en/vpn-setup' },
               { text: '🔌 Protocols', link: '/en/protocols' },
+              { text: '🛡️ AmneziaWG (AWG)', link: '/en/awg' },
+              { text: '🎭 VLESS + Reality', link: '/en/vless' },
               { text: '📊 3X-UI Panel', link: '/en/3x-ui' },
               { text: '⚡ Hysteria 2', link: '/en/hysteria2' },
               { text: '🔒 Server Security', link: '/en/security' }
