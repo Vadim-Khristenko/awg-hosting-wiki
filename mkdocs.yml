@@ -39,7 +39,7 @@ theme:
     - search.highlight       # Подсветка найденного на странице
 
 extra_css:
-  - stylesheets/extra.css
+  - stylesheets/amnezia.v2.css
 
 extra_javascript:
   - javascripts/progress.js
